@@ -9,7 +9,9 @@ use App\Livewire\SingleTournament;
 use App\Livewire\TournamentIndex;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () { return view('index'); })->name('home');
+Route::get('/', function () {
+    return view('index');
+})->name('home');
 
 Route::get('/{user:slug}', Index::class)->name('team.index');
 Route::get('/{user:slug}/past-games', PastIndex::class)->name('team.past-games');

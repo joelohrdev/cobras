@@ -35,7 +35,8 @@ class Coach extends Model
 
     public function getInitialsAttribute(): string
     {
-        $initials = collect(explode(' ', $this->name))->map(fn($name) => strtoupper($name[0]))->toArray();
+        $initials = collect(explode(' ', $this->name))->map(fn ($name) => strtoupper($name[0]))->toArray();
+
         return implode('', $initials);
     }
 }

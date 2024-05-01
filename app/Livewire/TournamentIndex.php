@@ -8,6 +8,7 @@ use Livewire\Component;
 class TournamentIndex extends Component
 {
     public User $user;
+
     public function render()
     {
         return view('livewire.tournament-index')->layout('components.app');

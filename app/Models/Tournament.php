@@ -19,7 +19,7 @@ class Tournament extends Model
         'end_date',
         'city',
         'state',
-        'result'
+        'result',
     ];
 
     public function user(): BelongsTo

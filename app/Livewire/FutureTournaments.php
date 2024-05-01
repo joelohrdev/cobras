@@ -10,6 +10,7 @@ use Livewire\Component;
 class FutureTournaments extends Component
 {
     public User $user;
+
     public function render()
     {
         return view('livewire.future-tournaments', [
@@ -17,7 +18,7 @@ class FutureTournaments extends Component
                 ->where('end_date', '>', Carbon::now()->toDateString())
                 ->orderBy('date')
                 ->get()
-                ->groupBy(fn($val) => Carbon::parse($val->start_date)->format('F')),
+                ->groupBy(fn ($val) => Carbon::parse($val->start_date)->format('F')),
         ]);
     }
 }
