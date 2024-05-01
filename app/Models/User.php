@@ -78,4 +78,9 @@ class User extends Authenticatable
     {
         return explode(' ', $this->name)[1];
     }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return str_ends_with($this->email, '@joelohr.com');
+    }
 }
