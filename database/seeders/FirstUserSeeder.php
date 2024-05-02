@@ -13,16 +13,18 @@ class FirstUserSeeder extends Seeder
             'name' => 'Joe Lohr',
             'slug' => 'lohr',
             'email' => 'emailme@joelohr.com',
+            'email_verified_at' => now(),
             'password' => bcrypt('password'),
             'is_admin' => true,
         ]);
 
         User::create([
-            'name' => 'Jane Doe',
-            'slug' => 'doe',
+            'name' => 'Eric Baillargeon',
+            'slug' => 'baillargeon',
             'division' => '10U',
-            'team_name' => 'Lady Tigers',
-            'email' => 'jdoe@email.com',
+            'team_name' => 'baillargeon',
+            'email' => 'joe.lohr@outlook.com',
+            'email_verified_at' => now(),
             'password' => bcrypt('password'),
             'is_admin' => false,
         ]);

@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 @empty
-                <p class="text-slate text-center">No players have been added</p>
+                <p class="col-span-3 text-slate text-center">No players have been added</p>
             @endforelse
         </div>
     </div>

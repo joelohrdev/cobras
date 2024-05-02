@@ -24,12 +24,11 @@ class Player extends Model
         return $this->belongsTo(User::class);
     }
 
-    protected static function boot()
+    protected static function booted(): void
     {
         parent::boot();
-
         static::creating(function ($player) {
-            $player->user_id = auth()->id();
+            $player->user_id = auth()->id() ?? $player->user_id;
         });
     }
 }
