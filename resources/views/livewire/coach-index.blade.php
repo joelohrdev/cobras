@@ -23,7 +23,7 @@
                     </div>
                 </div>
             @empty
-                <p class="text-slate text-center">No coaches have been created</p>
+                <p class="col-span-3 text-slate text-center">No coaches have been created</p>
             @endforelse
         </div>
     </div>
