@@ -29,7 +29,7 @@ class Coach extends Model
     {
         parent::boot();
         static::creating(function ($coach) {
-            $coach->user_id = auth()->id();
+            $coach->user_id = auth()->id() ?? $coach->user_id;
         });
     }
 
