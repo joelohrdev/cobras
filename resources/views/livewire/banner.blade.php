@@ -8,7 +8,7 @@
             <a href="{{ route('home') }}">
                 <img class="w-48 h-auto mx-auto mt-5" src="{{ asset('cobras.png') }}" alt="">
             </a>
-            <h1 class="font-bold text-2xl md:text-5xl text-center">{{ $user->lastName }} {{ $user->division }}</h1>
+            <h1 class="font-bold text-2xl md:text-5xl text-center">{{ ucfirst($user->team_name) }} {{ $user->division }}</h1>
         </div>
     </div>
 </div>

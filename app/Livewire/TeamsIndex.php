@@ -12,7 +12,7 @@ class TeamsIndex extends Component
         return view('livewire.teams-index', [
             'teams' => User::query()
                 ->where('is_admin', false)
-                ->select(['slug', 'division'])
+                ->select(['team_name', 'division'])
                 ->get(),
         ]);
     }
