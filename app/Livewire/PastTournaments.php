@@ -16,7 +16,7 @@ class PastTournaments extends Component
         return view('livewire.past-tournaments', [
             'tournaments' => $this->user->tournaments()
                 ->where('end_date', '<', Carbon::now()->toDateString())
-                ->orderBy('date')
+                ->orderBy('date', 'desc')
                 ->get()
                 ->groupBy(fn ($val) => Carbon::parse($val->start_date)->format('F')),
         ])->layout('components.app');
