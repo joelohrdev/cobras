@@ -83,4 +83,13 @@ class User extends Authenticatable
     {
         return str_ends_with($this->email, '@joelohr.com');
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($user) {
+            $user->slug = \Str::slug($user->name);
+        });
+    }
 }
