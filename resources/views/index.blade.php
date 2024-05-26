@@ -1,5 +1,5 @@
 <x-app>
-    <div class="relative">
+    <div class="relative overflow-hidden">
         <img src="{{ asset('index-bg.jpg') }}" alt="" class="h-96 w-full object-cover overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-white"></div>
         <div class="w-full max-w-4xl mx-auto sm:h-96 -mt-[370px] z-10 relative flex items-center justify-center">
