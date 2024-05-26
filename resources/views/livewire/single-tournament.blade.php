@@ -14,7 +14,7 @@
             <h1 class="text-2xl text-center">{{ $tournament->name }}</h1>
             <p class="text-gray-500 text-sm text-center">{{ $tournament->start_date->format('F d, Y') }} - {{ $tournament->end_date->format('F d, Y') }}</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 px-3">
             @foreach($games as $game)
                 <div class="flex items-center bg-white text-slate-600 group p-3 border rounded-lg">
                     <div class="flex justify-between">
