@@ -9,7 +9,7 @@
                 <div class="flex flex-col items-center justify-between bg-white text-slate-600 group p-3 border rounded-lg">
                     <div class="mb-5">
                         @if($coach->avatar)
-                            <img class="inline-block h-20 w-20 rounded-full" src="{{ asset($coach->avatar) }}" alt="">
+                            <img class="inline-block h-20 w-20 rounded-full" src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($coach->avatar) }}" alt="">
                         @else
                             <span class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-orange-500">
                               <span class="text-4xl font-medium leading-none text-black">{{ $coach->initials }}</span>
