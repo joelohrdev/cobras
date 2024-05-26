@@ -39,6 +39,7 @@ class CoachResource extends Resource
                     ]),
                 Forms\Components\FileUpload::make('avatar')
                     ->image()
+                    ->optimize('webp')
                     ->imageEditor()
                     ->imageEditorAspectRatios([
                         '16:9',
