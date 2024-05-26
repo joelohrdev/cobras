@@ -1,6 +1,6 @@
 <div class="relative">
     @if($this->user->banner_image)
-        <img src="{{ asset('storage/app/public/' . $this->user->banner_image) }}" alt="" class="h-96 w-full object-top object-contain md:object-cover">
+        <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($this->user->banner_image) }}" alt="" class="h-96 w-full object-top object-contain md:object-cover">
     @endif
     <div class="absolute h-96 inset-0 bg-gradient-to-t from-white"></div>
     <div class="w-full max-w-4xl mx-auto sm:h-96 -mt-[250px] z-10 relative flex items-center justify-center">
