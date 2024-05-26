@@ -9,17 +9,15 @@ use App\Livewire\SingleTournament;
 use App\Livewire\TournamentIndex;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', function () { return view('index'); })->name('home');
 
-Route::get('/{user:slug}', Index::class)->name('team.index');
-Route::get('/{user:slug}/past-games', PastIndex::class)->name('team.past-games');
+Route::get('/{user:team_name}', Index::class)->name('team.index');
+Route::get('/{user:team_name}/past-games', PastIndex::class)->name('team.past-games');
 
-Route::get('/{user:slug}/tournaments', TournamentIndex::class)->name('team.tournaments');
-Route::get('/{user:slug}/past-tournaments', PastTournaments::class)->name('team.past-tournaments');
-Route::get('/{user:slug}/tournaments/{tournament:uuid}', SingleTournament::class)->name('team.tournaments.show');
+Route::get('/{user:team_name}/tournaments', TournamentIndex::class)->name('team.tournaments');
+Route::get('/{user:team_name}/past-tournaments', PastTournaments::class)->name('team.past-tournaments');
+Route::get('/{user:team_name}/tournaments/{tournament:uuid}', SingleTournament::class)->name('team.tournaments.show');
 
-Route::get('/{user:slug}/players', PlayerIndex::class)->name('team.players');
+Route::get('/{user:team_name}/players', PlayerIndex::class)->name('team.players');
 
-Route::get('/{user:slug}/coaches', CoachIndex::class)->name('team.coaches');
+Route::get('/{user:team_name}/coaches', CoachIndex::class)->name('team.coaches');
