@@ -32,6 +32,7 @@ class PlayerResource extends Resource
                     ->label('High School'),
                 Forms\Components\FileUpload::make('avatar')
                     ->image()
+                    ->optimize('webp')
                     ->imageEditor()
                     ->imageEditorAspectRatios([
                         '16:9',

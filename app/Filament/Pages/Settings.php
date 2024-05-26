@@ -42,6 +42,7 @@ class Settings extends Page
                 TextInput::make('team_name'),
                 FileUpload::make('banner_image')
                     ->image()
+                    ->optimize('webp')
                     ->imageEditor()
                     ->imageEditorAspectRatios([
                         '16:9',
