@@ -14,7 +14,7 @@ class FutureTournaments extends Component
     public function render()
     {
         return view('livewire.future-tournaments', [
-            'tournaments' => Tournament::query()
+            'tournaments' => $this->user->tournaments()
                 ->where('end_date', '>', Carbon::now()->toDateString())
                 ->orderBy('date')
                 ->get()
