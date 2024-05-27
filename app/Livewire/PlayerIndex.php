@@ -12,7 +12,7 @@ class PlayerIndex extends Component
     public function render()
     {
         return view('livewire.player-index', [
-            'players' => $this->user->players()->orderBy('name')->get(),
+            'players' => $this->user->players()->orderBy('number')->get(),
         ])->layout('components.app');
     }
 }
