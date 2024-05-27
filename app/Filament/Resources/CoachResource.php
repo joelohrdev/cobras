@@ -34,8 +34,12 @@ class CoachResource extends Resource
                             ->label('Phone')
                             ->mask('999-999-9999')
                             ->tel(),
-                        Forms\Components\TextInput::make('position')
-                            ->label('Position'),
+                        Forms\Components\Select::make('position')
+                            ->options([
+                                'Manager' => 'Manager',
+                                'Assistant Coach' => 'Assistant Coach',
+                                'Other' => 'Other'
+                            ]),
                     ]),
                 Forms\Components\FileUpload::make('avatar')
                     ->image()
