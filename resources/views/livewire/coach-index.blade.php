@@ -19,6 +19,7 @@
                         </div>
                         <div class="text-center">
                             <p>{{ $coach['name'] }}</p>
+                            <p>{{ $coach['position'] }}</p>
                             <p>{{ $coach['email'] }}</p>
                             <p>{{ $coach['phone'] }}</p>
                         </div>
