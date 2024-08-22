@@ -33,7 +33,7 @@ class CoachPanelProvider extends PanelProvider
             ->favicon(asset('favicon.svg'))
             ->navigationItems([
                 NavigationItem::make('Website')
-                    ->url(fn () => route('team.index', auth()->user()->slug), shouldOpenInNewTab: true)
+                    ->url(fn () => route('team.index', auth()->user()->team_name), shouldOpenInNewTab: true)
                     ->icon('heroicon-o-link')
                     ->sort(5),
             ])
