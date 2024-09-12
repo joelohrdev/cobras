@@ -24,6 +24,7 @@ class CoachPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            ->darkMode(false)
             ->spa()
             ->font('Poppins')
             ->default()
