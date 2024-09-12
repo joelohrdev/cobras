@@ -18,6 +18,8 @@ class GameResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-map-pin';
 
+    protected ?string $subheading = 'Only add single games here. Any games that are part of a tournament should be added to the tournament.';
+
     protected static ?int $navigationSort = 3;
 
     public static function getEloquentQuery(): Builder
