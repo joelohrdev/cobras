@@ -37,9 +37,10 @@ class Settings extends Page
         return $form
             ->schema([
                 TextInput::make('division')
+                    ->disabled()
                     ->label('Division'),
 
-                TextInput::make('team_name'),
+                TextInput::make('team_name')->disabled(),
                 FileUpload::make('banner_image')
                     ->image()
                     ->optimize('webp')
