@@ -4,7 +4,7 @@
             <h1 class="text-xl text-slate-700 font-bold">{{ $month }}</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 @foreach($data as $game)
-                    <a wire:navigate href="{{ route('team.tournaments.show', [$user->slug, $game->uuid]) }}" class="flex items-center bg-white text-slate-600 group p-3 border rounded-lg">
+                    <a wire:navigate href="{{ route('team.tournaments.show', [$user->team_name, $game->uuid]) }}" class="flex items-center bg-white text-slate-600 group p-3 border rounded-lg">
                         <div class="flex justify-between">
                             <div class="h-20 flex flex-col justify-center items-center border-r pr-3 mr-3 group-hover:text-orange-500">
                                 <p class="text-4xl font-bold">{{ $game->start_date->format('d') }}</p>
