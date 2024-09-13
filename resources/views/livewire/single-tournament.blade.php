@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="">vs {{ $game->opponent }}</p>
+                        <p class="">vs {{ Str::limit($game->opponent, 27) }}</p>
                         <div class="flex gap-1 items-center text-slate-400">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#94a3b8" fill="none">
                                 <path d="M10.0808 2C5.47023 2.9359 2 7.01218 2 11.899C2 17.4776 6.52238 22 12.101 22C16.9878 22 21.0641 18.5298 22 13.9192" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
