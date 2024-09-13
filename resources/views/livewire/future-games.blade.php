@@ -5,7 +5,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 @foreach($data as $game)
                     <a
-                        href="{{ ($game->tournament) ? route('team.tournaments.show', [$user->slug, $game->tournament->uuid]) : '#' }}"
+                        href="{{ ($game->tournament) ? route('team.tournaments.show', [$user->team_name, $game->tournament->uuid]) : '#' }}"
                         class="{{ ($game->tournament) ? '' : 'disabled pointer-events-none' }} flex items-center bg-white text-slate-600 group p-3 border rounded-lg"
                     >
                         <div class="flex justify-between">
